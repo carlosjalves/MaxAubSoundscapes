@@ -1,0 +1,150 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-y: hidden;
+}
+
+::-webkit-scrollbar {
+  height: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+html{
+  overflow-x: overlay;
+}
+
+body{
+  overflow-x: hidden;
+}
+
+canvas {
+  display: block;
+  overflow-x: hidden;
+}
+
+.horizontal{
+  overflow-y: auto;
+  overflow-x: hidden;
+  transform: rotate(-90deg);
+  transform-origin: right top;
+  cursor: grab;
+}
+
+/* (Optional) Apply a "closed-hand" cursor during drag operation. */
+.horizontal:active {
+  cursor: grabbing;
+}
+
+/* Página inicial */
+
+.grid{
+  display: grid;
+  grid-template-columns: 25% 50% 25%;
+  grid-template-rows: 10% 20% 40% 10% 20%;
+  height: 100vh;
+  justify-items: center;
+}
+
+.row-1{
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+}
+
+.row-1 img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 1;
+}
+
+.row-3 p{
+  text-align: center;
+  font: 16pt "Special Elite", sans-serif;
+  line-height: 15px;
+  z-index: 2;
+}
+
+.row-2{
+  grid-column: 2 / 3;
+  grid-row: 4 / 5;
+}
+
+.row-3{
+  grid-column: 2 / 3;
+  grid-row: 3 / 4;
+}
+
+button{
+  cursor: pointer;
+}
+
+.btn {
+  text-align: center;
+  border-radius: 30px;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  padding: 20px 46px;
+  transition: 0.3s;
+  background-color: black;
+  color: white;
+  font: 16pt "Special Elite", sans-serif;
+}
+
+.btn:hover{
+  background-color: #830004;
+}
+
+.loadingclass p{
+  font: 14pt "Special Elite", sans-serif;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%)
+}
+
+/* Botao som on/off */
+
+.sound_on{
+  position: fixed;
+  top: 30px;
+  right: 40px;
+  z-index: 3;
+  cursor: pointer;
+}
+
+.sound_off{
+  position: fixed;
+  top: -100px;
+  right: 40px;
+}
+
+.img_sound_off{
+  position: fixed;
+  top: 30px;
+  right: 40px;
+  z-index: 5;
+  cursor: pointer;
+}
+
+/*Click zoom*/
+
+.click{
+  position: fixed;
+  top: 25px;
+  left: 40px;
+}
+
+.click p{
+  font: 12pt "Special Elite", sans-serif;
+}

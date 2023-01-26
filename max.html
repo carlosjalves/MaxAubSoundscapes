@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Max Aub Soundscapes</title>
+    <script src="scripts/p5.js"></script>
+    <script src="scripts/p5.sound.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="utf-8">
+
+</head>
+<body>
+
+<div class="click">
+    <p>Click sobre a imagem = zoom</p>
+</div>
+
+<div class="sound">
+    <img class="sound_on" src="data/coluna.png" alt="" width="50" height="50">
+    <img class="sound_off" src="data/coluna_sem_som.png" alt="" width="50" height="50">
+</div>
+
+<!--<img id="fundo" src="data/desenhofinal.png" alt="" height="1080">-->
+
+
+<div class="horizontal">
+    <script src="scripts/sketch.js"></script>
+</div>
+<div id="p5_loading" class="loadingclass">
+    <p>Loading...</p>
+</div>
+
+</body>
+
+<script>
+    function checkEvt(){
+        var evTypep = window.performance.getEntriesByType("navigation")[0].type ;
+        if (evTypep=='reload'){
+            window.location.replace("index.html");
+        }
+
+    }
+    checkEvt();
+</script>
+
+<script src="scripts/zoom.js"></script>
+</html>
